@@ -1,0 +1,172 @@
+.footer-graft + footer{
+  margin-top:0;
+}
+
+
+.footer *{box-sizing: border-box;}
+.footer li{line-height:1;}
+.footer{
+  margin-top:120px;
+  background: #fff;
+  padding:24px 0;
+  border-top:1px solid #dcdfe4;
+  &-inside{
+    @extend %clearfix;
+  }
+  &-align.left{
+    float:left
+  }
+  .fnb{
+    &-list{
+      font-size:0;
+      &-item{
+        margin-left:10px;
+        display:inline-block;
+        &:before{
+          content:'';
+          display:inline-block;
+          width:1px;
+          height:11px;
+          background:#ccc;
+          margin-right:10px;
+        }
+
+        &:first-child{
+          margin-left:0;
+        }
+
+        &:first-child:before{
+          display:none;
+        }
+      }
+      &-link{
+        color:#222;
+        font-size:0.875rem;
+        font-weight:600;
+        text-decoration:none;
+        &:hover{
+          opacity:.5
+        }
+      }
+    }
+  }
+  &-call{
+    margin:28px 0 20px 0;
+    font-size:1.125rem;
+    font-weight:600;
+    &-num{
+      color:#2c8179;
+      font-weight:900;
+    }
+  }
+
+  &-contact{
+    margin-bottom:12px;
+    font-size:0;
+    &-item{
+      display:inline-block;
+      color:#666;
+      font-size:0.875rem;
+      margin-right:10px;
+      &:before{
+        content:'';
+        display:inline-block;
+        width:1px;
+        height:11px;
+        background:#ccc;
+        margin-right:10px;
+      }
+      &:first-child{
+        margin-left:0px;
+      }
+      &:first-child:before{
+        display:none;
+      }
+    }
+  }
+
+  &-copyright{
+    color:#666;
+    font-size:0.75rem;
+    letter-spacing:.3px;
+    font-style:oblique;
+  }
+
+  &-align.right{
+    float:right;
+    margin-top:-16px;
+  }
+
+  .sns{
+    @extend %clearfix;
+    &-list{
+      float:right;
+      margin-right:-11px;
+      font-size:0;
+      &-item{
+        display:inline-block;
+        margin-right:10px;
+      }
+      &-link{
+        width:22px;
+        height:22px;
+        &:hover{
+          opacity:.5;
+        }
+      }
+    }
+  }
+  .relsite{
+    float:right;
+    width:202px;
+    height:32px;
+    margin:20px 0 12px 0;
+    .select-list{
+      top:-391px;
+      width:202px;
+      max-height:392px;
+    }
+  }
+
+  .incheon-select{
+    @extend %clearfix;
+    width:100%;
+  }
+
+  .incheon-etc{
+    @extend %clearfix;
+    .web-mark{
+      display:inline-block;
+      margin-right:20px;
+    }
+    .google-play-mark{
+      display:inline-block;
+      height:30px;
+      position:relative;
+      bottom:8px;
+      right:-14px;
+      img{
+        height:100%;
+      }
+    }
+    .footer-shortcut{
+      float:right;
+      margin-top:2px;
+      &-link{
+        font-size:0.875rem;
+        font-weight:600;
+        line-height:1.3rem;
+        text-decoration:none;
+        &:hover{
+          opacity:.5;
+        }
+        .link-tit{
+          display:inline-block;
+          width:96px;
+        }
+      }
+    }
+
+  }
+
+}
