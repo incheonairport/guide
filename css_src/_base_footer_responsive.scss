@@ -1,0 +1,90 @@
+
+// 780 <
+@media all and (max-width:780px) {
+  .footer{
+    margin-top:20px;
+    &-align.left{
+      width:100%;
+      float:none;
+    }
+    .fnb{
+      margin:20px 0;
+      &-list{
+        &-item{
+          margin-left:4px;
+          margin-bottom:10px;
+          letter-spacing:-1px;
+          &:before{
+            margin-right:4px;
+          }
+          &:nth-child(6){
+            margin-left:0;
+            &:before{
+              display:none;
+            }
+          }
+        }
+        &-link{
+          font-size:0.75rem;
+        }
+      }
+    }
+    &-call{
+      margin:10px 0 10px 0;
+      font-size:1rem;
+    }
+    &-contact{
+      font-size: inherit;
+      &-item{
+        font-size:0.75em;
+        letter-spacing:-.5px;
+        &:before{
+          display:none;
+        }
+      }
+    }
+    &-copyright{
+      font-size:0.75rem;
+      letter-spacing:-0.5px;
+    }
+    &-align.right{
+      float:none;
+      margin-top:0;
+    }
+    .sns{
+      margin-bottom:30px;
+      &-list{
+        float:none;
+        margin-right:0;
+        width:148px;
+        margin:auto;
+        &-item{
+          display:inline-block;
+          margin-right:20px;
+          &:last-child{
+            margin-right:0;
+          }
+        }
+      }
+    }
+    .relsite{
+      float:none;
+      width:100%;
+      .select-list{
+        width:100%;
+      }
+    }
+    .incheon-etc{
+      width:238px;
+      margin: 20px auto;
+      .footer-shortcut{
+        float:none;
+        margin-top:2px;
+        &-link{
+          font-size:0.875rem;
+        }
+      }
+    }
+  }
+}
+
