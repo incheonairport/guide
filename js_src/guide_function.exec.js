@@ -9,12 +9,19 @@ $(function(){
    */
 
   var category = '';
+  var pathName = '';
 
   (function(){
 
     var locationData = location;
 
     category = locationData.search.replace('?', '');
+
+    if( locationData.pathname.indexOf('release') > 0 ){
+
+      pathName = '/release';
+
+    }
 
     if( category == '' ){
 
@@ -114,7 +121,7 @@ $(function(){
           if( $record.children('td:nth-child(8)').text() == item[j] ) {
 
             $record.prepend('<td>'+ pageCount +'</td>');
-            $record.addClass('done').append('<td class="center"><a href="../html/' + item[j] + '.html" class="list-link" target="blank"> DONE </a></td>');
+            $record.addClass('done').append('<td class="center"><a href="' + pathName + '/' + category + '/html/' + item[j] + '.html" class="list-link" target="blank"> DONE </a></td>');
             itemFlag[j] = true;
             pageCount++;
             break;
@@ -314,6 +321,7 @@ $(function(){
     if( showCategory == undefined ){
       $('.file-list tbody tr').removeClass('hide');
     } else {
+      $('.file-list tbody tr.category, .file-list tbody tr.primary-category').removeClass('hide');
       $('.file-list tbody tr.' + showCategory + '-page').removeClass('hide');
     }
 

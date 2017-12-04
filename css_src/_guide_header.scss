@@ -32,7 +32,7 @@
   z-index:99999;
 
   &-logo{
-    width:104px;
+    //width:104px;
     position:absolute;
     top:13px;
     left:50%;
@@ -61,13 +61,13 @@
       &:nth-child(2){
         position:absolute;
         right:50%;
-        margin-right:150px;
+        margin-right:200px;
       }
 
       &:nth-child(3){
         position:absolute;
         left:50%;
-        margin-left:150px;
+        margin-left:200px;
       }
 
       &:nth-child(4){
