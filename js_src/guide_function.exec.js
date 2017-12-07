@@ -40,6 +40,7 @@ $(function(){
   var fileData = [];
 
   var $record = $('.file-list tbody tr');
+  var $urlRecord = $('.url-list tbody tr');
 
   var count = {
 
@@ -63,6 +64,7 @@ $(function(){
   };
 
   var pageCount = 1;
+  var urlCount = 1;
 
   // each data split filename and ext
   function splitData(data){
@@ -280,6 +282,40 @@ $(function(){
     $('.done-work-link .progress-bar').css({width: Math.floor( count.allLink / count.allLink * 100) + '%'}).html('<div class="progress-percent">' + count.allLink + 'p</div>');
   }
 
+  // add URL
+  function addURL($record){
+
+    if(!$record.hasClass('cancel') && !$record.hasClass('category') && !$record.hasClass('link-page')){
+
+      if( $record.attr('class').indexOf('page') >= 0 ){
+
+        if( $record.children('td:nth-child(9)').text() != '' ){
+
+          $record
+              .addClass('done')
+              .prepend('<td>'+ urlCount +'</td>')
+              .append('<td class="center"><a href="http://ndev-www.airport.kr/ap_cnt/ko/' + $record.children('td:nth-child(10)').text() + '" class="list-link" target="_blank"> DONE </a></td>');
+
+        } else {
+
+          $record.prepend('<td></td>');
+          $record.append('<td></td>');
+
+        }
+
+      } else {
+        $record.prepend('<td></td>');
+        $record.append('<td></td>');
+      }
+
+    } else {
+      $record.prepend('<td></td>');
+      $record.append('<td></td>');
+
+    }
+
+  }
+
   /**
    * run
    */
@@ -303,6 +339,14 @@ $(function(){
     unmatchFile();
 
     outputProgress();
+
+    $urlRecord.each(function(){
+
+      addClassname($(this));
+
+      addURL($(this))
+
+    });
 
   });
 
