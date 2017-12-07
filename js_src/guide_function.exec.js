@@ -297,10 +297,10 @@ $(function(){
               .addClass('done')
               .prepend('<td>'+ urlCount +'</td>')
               .append('<td class="center">' +
-              '<a href="http://ndev-www.airport.kr/3' + urlFile[0] + '" class="list-link" target="_blank"> DONE </a><br />' +
-              '<a href="http://ndev-www.airport.kr/3' + urlFile[1] + '" class="list-link" target="_blank"> DONE </a><br />' +
-              '<a href="http://ndev-www.airport.kr/3' + urlFile[2] + '" class="list-link" target="_blank"> DONE </a><br />' +
-              '<a href="http://ndev-www.airport.kr/3' + urlFile[3] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[0] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[1] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[2] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[3] + '" class="list-link" target="_blank"> DONE </a><br />' +
               '</td>');
 
         } else {
