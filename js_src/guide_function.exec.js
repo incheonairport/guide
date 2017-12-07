@@ -392,8 +392,6 @@ $(function(){
   // link or alert message
   $('body').on('click', '.file-list tr', function(e){
 
-    console.log( $(this).hasClass('cancel') );
-
     if( $(this).find('.list-link').length ){
 
       window.open($(this).find('.list-link').attr('href'));
@@ -401,6 +399,21 @@ $(function(){
     } else {
 
       alert('제작 페이지가 아닙니다.');
+
+    }
+
+  });
+
+  // link or alert message
+  $('body').on('click', '.url-list tr', function(e){
+
+    if( $(this).find('.list-link').length ){
+
+      window.open($(this).find('.list-link').attr('href'));
+
+    } else {
+
+      alert('배포 파일이 아닙니다.');
 
     }
 
