@@ -291,10 +291,17 @@ $(function(){
 
         if( $record.children('td:nth-child(9)').text() != '' ){
 
+          var urlFile = $record.children('td:nth-child(9)').html().split('<br>');
+
           $record
               .addClass('done')
               .prepend('<td>'+ urlCount +'</td>')
-              .append('<td class="center"><a href="http://ndev-www.airport.kr/ap_cnt/ko/' + $record.children('td:nth-child(10)').text() + '" class="list-link" target="_blank"> DONE </a></td>');
+              .append('<td class="center">' +
+              '<a href="http://ndev-www.airport.kr/ap_cnt/' + urlFile[0] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '<a href="http://ndev-www.airport.kr/ap_cnt/' + urlFile[1] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '<a href="http://ndev-www.airport.kr/ap_cnt/' + urlFile[2] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '<a href="http://ndev-www.airport.kr/ap_cnt/' + urlFile[3] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '</td>');
 
         } else {
 
@@ -389,6 +396,43 @@ $(function(){
 
   });
 
+  $('body').on('click', '.js-url-show-all', function(){
+
+    $('.btn-type-small').removeClass('on');
+
+    var showCategory = $(this).attr('class').split(' ')[4];
+
+    $(this).addClass('on');
+
+    $('.url-list tbody tr').addClass('hide');
+
+    if( showCategory == undefined ){
+      $('.url-list tbody tr').removeClass('hide');
+    } else {
+      $('.url-list tbody tr.category, .url-list tbody tr.primary-category').removeClass('hide');
+      $('.url-list tbody tr.' + showCategory + '-page').removeClass('hide');
+    }
+
+  });
+
+  $('body').on('click', '.js-url-show-done', function(){
+
+    $('.btn-type-small').removeClass('on');
+
+    var showCategory = $(this).attr('class').split(' ')[4];
+
+    $(this).addClass('on');
+
+    $('.url-list tbody tr').addClass('hide');
+
+    if( showCategory == undefined ){
+      $('.url-list tbody tr.done').removeClass('hide');
+    } else {
+      $('.url-list tbody tr.' + showCategory + '-page.done').removeClass('hide');
+    }
+
+  });
+
   // link or alert message
   $('body').on('click', '.file-list tr', function(e){
 
@@ -409,7 +453,7 @@ $(function(){
 
     if( $(this).find('.list-link').length ){
 
-      window.open($(this).find('.list-link').attr('href'));
+      //window.open($(this).find('.list-link').attr('href'));
 
     } else {
 
