@@ -40,6 +40,7 @@ $(function(){
   var fileData = [];
 
   var $record = $('.file-list tbody tr');
+  var $urlRecord = $('.url-list tbody tr');
 
   var count = {
 
@@ -63,6 +64,7 @@ $(function(){
   };
 
   var pageCount = 1;
+  var urlCount = 1;
 
   // each data split filename and ext
   function splitData(data){
@@ -280,6 +282,47 @@ $(function(){
     $('.done-work-link .progress-bar').css({width: Math.floor( count.allLink / count.allLink * 100) + '%'}).html('<div class="progress-percent">' + count.allLink + 'p</div>');
   }
 
+  // add URL
+  function addURL($record){
+
+    if(!$record.hasClass('cancel') && !$record.hasClass('category') && !$record.hasClass('link-page')){
+
+      if( $record.attr('class').indexOf('page') >= 0 ){
+
+        if( $record.children('td:nth-child(9)').text() != '' ){
+
+          var urlFile = $record.children('td:nth-child(9)').html().split('<br>');
+
+          $record
+              .addClass('done')
+              .prepend('<td>'+ urlCount +'</td>')
+              .append('<td class="center">' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[0] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[1] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[2] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[3] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '</td>');
+
+        } else {
+
+          $record.prepend('<td></td>');
+          $record.append('<td></td>');
+
+        }
+
+      } else {
+        $record.prepend('<td></td>');
+        $record.append('<td></td>');
+      }
+
+    } else {
+      $record.prepend('<td></td>');
+      $record.append('<td></td>');
+
+    }
+
+  }
+
   /**
    * run
    */
@@ -303,6 +346,14 @@ $(function(){
     unmatchFile();
 
     outputProgress();
+
+    $urlRecord.each(function(){
+
+      addClassname($(this));
+
+      addURL($(this))
+
+    });
 
   });
 
@@ -345,10 +396,45 @@ $(function(){
 
   });
 
+  $('body').on('click', '.js-url-show-all', function(){
+
+    $('.btn-type-small').removeClass('on');
+
+    var showCategory = $(this).attr('class').split(' ')[4];
+
+    $(this).addClass('on');
+
+    $('.url-list tbody tr').addClass('hide');
+
+    if( showCategory == undefined ){
+      $('.url-list tbody tr').removeClass('hide');
+    } else {
+      $('.url-list tbody tr.category, .url-list tbody tr.primary-category').removeClass('hide');
+      $('.url-list tbody tr.' + showCategory + '-page').removeClass('hide');
+    }
+
+  });
+
+  $('body').on('click', '.js-url-show-done', function(){
+
+    $('.btn-type-small').removeClass('on');
+
+    var showCategory = $(this).attr('class').split(' ')[4];
+
+    $(this).addClass('on');
+
+    $('.url-list tbody tr').addClass('hide');
+
+    if( showCategory == undefined ){
+      $('.url-list tbody tr.done').removeClass('hide');
+    } else {
+      $('.url-list tbody tr.' + showCategory + '-page.done').removeClass('hide');
+    }
+
+  });
+
   // link or alert message
   $('body').on('click', '.file-list tr', function(e){
-
-    console.log( $(this).hasClass('cancel') );
 
     if( $(this).find('.list-link').length ){
 
@@ -357,6 +443,21 @@ $(function(){
     } else {
 
       alert('제작 페이지가 아닙니다.');
+
+    }
+
+  });
+
+  // link or alert message
+  $('body').on('click', '.url-list tr', function(e){
+
+    if( $(this).find('.list-link').length ){
+
+      //window.open($(this).find('.list-link').attr('href'));
+
+    } else {
+
+      alert('배포 파일이 아닙니다.');
 
     }
 
