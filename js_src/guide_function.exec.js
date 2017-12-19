@@ -123,7 +123,7 @@ $(function(){
           if( $record.children('td:nth-child(8)').text() == item[j] ) {
 
             $record.prepend('<td>'+ pageCount +'</td>');
-            $record.addClass('done').append('<td class="center"><a href="' + pathName + '/' + category + '/html/' + item[j] + '.html" class="list-link" target="blank"> DONE </a></td>');
+            $record.addClass('done').append('<td class="center"><a href="' + pathName + '/' + category + '/html/' + item[j] + '.html" class="list-link" target="blank"> Link </a></td>');
             itemFlag[j] = true;
             pageCount++;
             break;
@@ -297,10 +297,10 @@ $(function(){
               .addClass('done')
               .prepend('<td>'+ urlCount +'</td>')
               .append('<td class="center">' +
-              '<a href="http://ndev-www.airport.kr/' + urlFile[0] + '" class="list-link" target="_blank"> DONE </a><br />' +
-              '<a href="http://ndev-www.airport.kr/' + urlFile[1] + '" class="list-link" target="_blank"> DONE </a><br />' +
-              '<a href="http://ndev-www.airport.kr/' + urlFile[2] + '" class="list-link" target="_blank"> DONE </a><br />' +
-              '<a href="http://ndev-www.airport.kr/' + urlFile[3] + '" class="list-link" target="_blank"> DONE </a><br />' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[0] + '" class="list-link" target="_blank"> Link </a><br />' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[1] + '" class="list-link" target="_blank"> Link </a><br />' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[2] + '" class="list-link" target="_blank"> Link </a><br />' +
+              '<a href="http://ndev-www.airport.kr/' + urlFile[3] + '" class="list-link" target="_blank"> Link </a><br />' +
               '</td>');
 
         } else {
