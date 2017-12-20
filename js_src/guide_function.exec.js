@@ -289,13 +289,14 @@ $(function(){
 
       if( $record.attr('class').indexOf('page') >= 0 ){
 
-        if( $record.children('td:nth-child(9)').text() != '' ){
+        console.log($record.children('td:nth-child(11)').text());
 
-          var urlFile = $record.children('td:nth-child(9)').html().split('<br>');
+        if( $record.children('td:nth-child(11)').text() != '' ){
+
+          var urlFile = $record.children('td:nth-child(11)').html().split('<br>');
 
           $record
               .addClass('done')
-              .prepend('<td>'+ urlCount +'</td>')
               .append('<td class="center">' +
               '<a href="http://ndev-www.airport.kr/' + urlFile[0] + '" class="list-link" target="_blank"> Link </a><br />' +
               '<a href="http://ndev-www.airport.kr/' + urlFile[1] + '" class="list-link" target="_blank"> Link </a><br />' +
@@ -305,18 +306,15 @@ $(function(){
 
         } else {
 
-          $record.prepend('<td></td>');
           $record.append('<td></td>');
 
         }
 
       } else {
-        $record.prepend('<td></td>');
         $record.append('<td></td>');
       }
 
     } else {
-      $record.prepend('<td></td>');
       $record.append('<td></td>');
 
     }
@@ -341,19 +339,13 @@ $(function(){
 
       compareFile($(this));
 
+      addURL($(this))
+
     });
 
     unmatchFile();
 
     outputProgress();
-
-    $urlRecord.each(function(){
-
-      addClassname($(this));
-
-      addURL($(this))
-
-    });
 
   });
 
@@ -433,35 +425,35 @@ $(function(){
 
   });
 
-  // link or alert message
-  $('body').on('click', '.file-list tr', function(e){
+  //// link or alert message
+  //$('body').on('click', '.file-list tr', function(e){
+  //
+  //  if( $(this).find('.list-link').length ){
+  //
+  //    window.open($(this).find('.list-link').attr('href'));
+  //
+  //  } else {
+  //
+  //    alert('제작 페이지가 아닙니다.');
+  //
+  //  }
+  //
+  //});
 
-    if( $(this).find('.list-link').length ){
-
-      window.open($(this).find('.list-link').attr('href'));
-
-    } else {
-
-      alert('제작 페이지가 아닙니다.');
-
-    }
-
-  });
-
-  // link or alert message
-  $('body').on('click', '.url-list tr', function(e){
-
-    if( $(this).find('.list-link').length ){
-
-      //window.open($(this).find('.list-link').attr('href'));
-
-    } else {
-
-      alert('배포 파일이 아닙니다.');
-
-    }
-
-  });
+  //// link or alert message
+  //$('body').on('click', '.url-list tr', function(e){
+  //
+  //  if( $(this).find('.list-link').length ){
+  //
+  //    //window.open($(this).find('.list-link').attr('href'));
+  //
+  //  } else {
+  //
+  //    alert('배포 파일이 아닙니다.');
+  //
+  //  }
+  //
+  //});
 
   // tab
 
