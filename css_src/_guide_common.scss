@@ -105,7 +105,7 @@
       @extend %clearfix;
       &-item {
         float: left;
-        width:397px;
+        width:calc(50% - 4px);
         height: 56px;
         margin-left: 4px;
         &-link{
@@ -394,6 +394,10 @@ table{
           td{
             padding:0;
           }
+        }
+
+        &.except-foreign{
+          background:saddlebrown;
         }
 
         //&.iframe-page{

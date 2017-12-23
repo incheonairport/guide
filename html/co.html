@@ -6,7 +6,7 @@
   <title>인천국제공항</title>
   <link rel="stylesheet" href="/static/guide/css/guide_style.css" />
   <script src="/static/guide/js/lib/jquery-3.2.1.min.js"></script>
-  <script src="/static/guide/js/guide_function.min.js"></script>
+  <script src="/static/guide/js/guide_function.debug.js"></script>
 </head>
 <body>
 
@@ -206,6 +206,28 @@
       <div class="multi-col double gutter mt40">
         <div class="inner-col">
           <table class="vt">
+            <colgroup>
+              <col style="width:20%" />
+              <col style="width:20%" />
+            </colgroup>
+            <thead>
+            <tr>
+              <th>전체 작업할 다국어 페이지 개수</th>
+              <th>현재 완료된 다국어 페이지 개수</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="center number all-work-foreign">0</td>
+              <td class="center number done-work-foreign">
+                <div class="progress-wrap">
+                  <div class="progress-bar"></div>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <table class="vt mt40">
             <colgroup>
               <col style="width:20%" />
               <col style="width:20%" />
@@ -814,7 +836,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AE_02_03</td>
+          <td>#CO_AE_02_03</td>
           <td>repcon</td>
           <td>co_cnt/ko/intro/open/repcon/repcon.do<br/>co_cnt/en/intro/open/repcon/repcon.do<br/>co_cnt/ch/intro/open/repcon/repcon.do<br/>co_cnt/ja/intro/open/repcon/repcon.do</td>
         </tr>
@@ -1510,7 +1532,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG</td>
+          <td>#CO_AG</td>
           <td>mandis</td>
           <td>co_cnt/ko/intro/mamdis/mamdis.do<br/>co_cnt/en/intro/mamdis/mamdis.do<br/>co_cnt/ch/intro/mamdis/mamdis.do<br/>co_cnt/ja/intro/mamdis/mamdis.do</td>
         </tr>
@@ -1618,7 +1640,7 @@
           <td>고객헌장 전문</td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_02_05_01</td>
+          <td>#CO_AG_02_05_01</td>
           <td>cuchsp</td>
           <td>co_cnt/ko/intro/mamdis/cuchsp/cuchsp.do<br/>co_cnt/en/intro/mamdis/cuchsp/cuchsp.do<br/>co_cnt/ch/intro/mamdis/cuchsp/cuchsp.do<br/>co_cnt/ja/intro/mamdis/cuchsp/cuchsp.do</td>
         </tr>
@@ -1630,7 +1652,7 @@
           <td>서비스 이행표준</td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_02_05_02</td>
+          <td>#CO_AG_02_05_02</td>
           <td>sefust</td>
           <td>co_cnt/ko/intro/mamdis/sefust/sefust.do<br/>co_cnt/en/intro/mamdis/sefust/sefust.do<br/>co_cnt/ch/intro/mamdis/sefust/sefust.do<br/>co_cnt/ja/intro/mamdis/sefust/sefust.do</td>
         </tr>
@@ -1642,7 +1664,7 @@
           <td>이행지표 추진실적</td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_02_05_03</td>
+          <td>#CO_AG_02_05_03</td>
           <td>perind</td>
           <td>co_cnt/ko/intro/mamdis/perind/perind.do<br/>co_cnt/en/intro/mamdis/perind/perind.do<br/>co_cnt/ch/intro/mamdis/perind/perind.do<br/>co_cnt/ja/intro/mamdis/perind/perind.do</td>
         </tr>
@@ -1666,7 +1688,7 @@
           <td>게시판</td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_02_07</td>
+          <td>#CO_AG_02_07</td>
           <td>phedfa</td>
           <td>co_cnt/ko/intro/mamdis/phedfa/phedfa.do<br/>co_cnt/en/intro/mamdis/phedfa/phedfa.do<br/>co_cnt/ch/intro/mamdis/phedfa/phedfa.do<br/>co_cnt/ja/intro/mamdis/phedfa/phedfa.do</td>
         </tr>
@@ -1702,7 +1724,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_03_01</td>
+          <td>#CO_AG_03_01</td>
           <td>stexau</td>
           <td>co_cnt/ko/intro/mamdis/stexau/stexau.do<br/>co_cnt/en/intro/mamdis/stexau/stexau.do<br/>co_cnt/ch/intro/mamdis/stexau/stexau.do<br/>co_cnt/ja/intro/mamdis/stexau/stexau.do</td>
         </tr>
@@ -1786,7 +1808,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_05_01</td>
+          <td>#CO_AG_05_01</td>
           <td>aitrpe</td>
           <td>co_cnt/ko/intro/mamdis/aitrpe/aitrpe.do<br/>co_cnt/en/intro/mamdis/aitrpe/aitrpe.do<br/>co_cnt/ch/intro/mamdis/aitrpe/aitrpe.do<br/>co_cnt/ja/intro/mamdis/aitrpe/aitrpe.do</td>
         </tr>
@@ -1798,7 +1820,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_05_02</td>
+          <td>#CO_AG_05_02</td>
           <td>aisepe</td>
           <td>co_cnt/ko/intro/mamdis/aisepe/aisepe.do<br/>co_cnt/en/intro/mamdis/aisepe/aisepe.do<br/>co_cnt/ch/intro/mamdis/aisepe/aisepe.do<br/>co_cnt/ja/intro/mamdis/aisepe/aisepe.do</td>
         </tr>
@@ -1810,7 +1832,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_05_03</td>
+          <td>#CO_AG_05_03</td>
           <td>airper</td>
           <td>co_cnt/ko/intro/mamdis/airper/airper.do<br/>co_cnt/en/intro/mamdis/airper/airper.do<br/>co_cnt/ch/intro/mamdis/airper/airper.do<br/>co_cnt/ja/intro/mamdis/airper/airper.do</td>
         </tr>
@@ -1822,7 +1844,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_05_04</td>
+          <td>#CO_AG_05_04</td>
           <td>aiinco</td>
           <td>co_cnt/ko/intro/mamdis/aiinco/aiinco.do<br/>co_cnt/en/intro/mamdis/aiinco/aiinco.do<br/>co_cnt/ch/intro/mamdis/aiinco/aiinco.do<br/>co_cnt/ja/intro/mamdis/aiinco/aiinco.do</td>
         </tr>
@@ -1834,7 +1856,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_05_05</td>
+          <td>#CO_AG_05_05</td>
           <td>iaivta</td>
           <td>co_cnt/ko/intro/mamdis/iaivta/iaivta.do<br/>co_cnt/en/intro/mamdis/iaivta/iaivta.do<br/>co_cnt/ch/intro/mamdis/iaivta/iaivta.do<br/>co_cnt/ja/intro/mamdis/iaivta/iaivta.do</td>
         </tr>
@@ -1846,7 +1868,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_05_06</td>
+          <td>#CO_AG_05_06</td>
           <td>lohupe</td>
           <td>co_cnt/ko/intro/mamdis/lohupe/lohupe.do<br/>co_cnt/en/intro/mamdis/lohupe/lohupe.do<br/>co_cnt/ch/intro/mamdis/lohupe/lohupe.do<br/>co_cnt/ja/intro/mamdis/lohupe/lohupe.do</td>
         </tr>
@@ -1870,7 +1892,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_05_07</td>
+          <td>#CO_AG_05_07</td>
           <td>busiso</td>
           <td>co_cnt/ko/intro/mamdis/busiso/busiso.do<br/>co_cnt/en/intro/mamdis/busiso/busiso.do<br/>co_cnt/ch/intro/mamdis/busiso/busiso.do<br/>co_cnt/ja/intro/mamdis/busiso/busiso.do</td>
         </tr>
@@ -1882,7 +1904,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_05_08</td>
+          <td>#CO_AG_05_08</td>
           <td>caiipe</td>
           <td>co_cnt/ko/intro/mamdis/caiipe/caiipe.do<br/>co_cnt/en/intro/mamdis/caiipe/caiipe.do<br/>co_cnt/ch/intro/mamdis/caiipe/caiipe.do<br/>co_cnt/ja/intro/mamdis/caiipe/caiipe.do</td>
         </tr>
@@ -1894,7 +1916,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_05_09</td>
+          <td>#CO_AG_05_09</td>
           <td>cownor</td>
           <td>co_cnt/ko/intro/mamdis/cownor/cownor.do<br/>co_cnt/en/intro/mamdis/cownor/cownor.do<br/>co_cnt/ch/intro/mamdis/cownor/cownor.do<br/>co_cnt/ja/intro/mamdis/cownor/cownor.do</td>
         </tr>
@@ -1906,7 +1928,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_AG_05_10</td>
+          <td>#CO_AG_05_10</td>
           <td>ovbupe</td>
           <td>co_cnt/ko/intro/mamdis/ovbupe/ovbupe.do<br/>co_cnt/en/intro/mamdis/ovbupe/ovbupe.do<br/>co_cnt/ch/intro/mamdis/ovbupe/ovbupe.do<br/>co_cnt/ja/intro/mamdis/ovbupe/ovbupe.do</td>
         </tr>
@@ -2317,7 +2339,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_BE_03</td>
+          <td>#CO_BE_03</td>
           <td>pusabo</td>
           <td>co_cnt/ko/cyberpr/publicat/pusabo/pusabo.do<br/>co_cnt/en/cyberpr/publicat/pusabo/pusabo.do<br/>co_cnt/ch/cyberpr/publicat/pusabo/pusabo.do<br/>co_cnt/ja/cyberpr/publicat/pusabo/pusabo.do</td>
         </tr>
@@ -2389,7 +2411,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_BE_07</td>
+          <td>#CO_BE_07</td>
           <td>aifane</td>
           <td>co_cnt/ko/cyberpr/publicat/aifane/aifane.do<br/>co_cnt/en/cyberpr/publicat/aifane/aifane.do<br/>co_cnt/ch/cyberpr/publicat/aifane/aifane.do<br/>co_cnt/ja/cyberpr/publicat/aifane/aifane.do</td>
         </tr>
@@ -2653,7 +2675,7 @@
           <td></td>
           <td></td>
           <td></td>
-          <td>CO_BI_04</td>
+          <td>#CO_BI_04</td>
           <td>파일 다운로드</td>
           <td></td>
         </tr>
@@ -2878,8 +2900,7 @@
         </tr>
         <tr>
           <td></td>
-          <td>정규직 전환 알림방
-          </td>
+          <td>#정규직 전환 알림방</td>
           <td>게시판</td>
           <td></td>
           <td></td>
@@ -3221,7 +3242,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CG_01_01</td>
+          <td>#CO_CG_01_01</td>
           <td>apfoco</td>
           <td>/co_cnt/ko/cuspar/complain/apfoco/apfoco.do<br/>/co_cnt/en/cuspar/complain/apfoco/apfoco.do<br/>/co_cnt/ch/cuspar/complain/apfoco/apfoco.do<br/>/co_cnt/ja/cuspar/complain/apfoco/apfoco.do</td>
         </tr>
@@ -3233,7 +3254,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CG_01_02</td>
+          <td>#CO_CG_01_02</td>
           <td>howuse</td>
           <td>/co_cnt/ko/cuspar/complain/howuse/howuse.do<br/>/co_cnt/en/cuspar/complain/howuse/howuse.do<br/>/co_cnt/ch/cuspar/complain/howuse/howuse.do<br/>/co_cnt/ja/cuspar/complain/howuse/howuse.do</td>
         </tr>
@@ -3353,7 +3374,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CG_02_01</td>
+          <td>#CO_CG_02_01</td>
           <td>reobwa</td>
           <td>/co_cnt/ko/cuspar/complain/reobwa/reobwa.do<br/>/co_cnt/en/cuspar/complain/reobwa/reobwa.do<br/>/co_cnt/ch/cuspar/complain/reobwa/reobwa.do<br/>/co_cnt/ja/cuspar/complain/reobwa/reobwa.do</td>
         </tr>
@@ -3509,7 +3530,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CG_04_01</td>
+          <td>#CO_CG_04_01</td>
           <td>ilsuno</td>
           <td>/co_cnt/ko/cuspar/complain/ilsuno/ilsuno.do<br/>/co_cnt/en/cuspar/complain/ilsuno/ilsuno.do<br/>/co_cnt/ch/cuspar/complain/ilsuno/ilsuno.do<br/>/co_cnt/ja/cuspar/complain/ilsuno/ilsuno.do</td>
         </tr>
@@ -3629,7 +3650,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CH_01</td>
+          <td>#CO_CH_01</td>
           <td>ifmtus</td>
           <td>/co_cnt/ko/cuspar/newspape/ifmtus/ifmtus.do<br/>/co_cnt/en/cuspar/newspape/ifmtus/ifmtus.do<br/>/co_cnt/ch/cuspar/newspape/ifmtus/ifmtus.do<br/>/co_cnt/ja/cuspar/newspape/ifmtus/ifmtus.do</td>
         </tr>
@@ -3653,7 +3674,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CH_02_01</td>
+          <td>#CO_CH_02_01</td>
           <td>ifmuse</td>
           <td>/co_cnt/ko/cuspar/newspape/ifmuse/ifmuse.do<br/>/co_cnt/en/cuspar/newspape/ifmuse/ifmuse.do<br/>/co_cnt/ch/cuspar/newspape/ifmuse/ifmuse.do<br/>/co_cnt/ja/cuspar/newspape/ifmuse/ifmuse.do</td>
         </tr>
@@ -3773,7 +3794,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CH_03_01</td>
+          <td>#CO_CH_03_01</td>
           <td>inforu</td>
           <td>/co_cnt/ko/cuspar/newspape/inforu/inforu.do<br/>/co_cnt/en/cuspar/newspape/inforu/inforu.do<br/>/co_cnt/ch/cuspar/newspape/inforu/inforu.do<br/>/co_cnt/ja/cuspar/newspape/inforu/inforu.do</td>
         </tr>
@@ -3785,7 +3806,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CH_03_02</td>
+          <td>#CO_CH_03_02</td>
           <td>voldec</td>
           <td>/co_cnt/ko/cuspar/newspape/voldec/voldec.do<br/>/co_cnt/en/cuspar/newspape/voldec/voldec.do<br/>/co_cnt/ch/cuspar/newspape/voldec/voldec.do<br/>/co_cnt/ja/cuspar/newspape/voldec/voldec.do</td>
         </tr>
@@ -3809,7 +3830,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CH_03_03</td>
+          <td>#CO_CH_03_03</td>
           <td>thpano</td>
           <td>/co_cnt/ko/cuspar/newspape/thpano/thpano.do<br/>/co_cnt/en/cuspar/newspape/thpano/thpano.do<br/>/co_cnt/ch/cuspar/newspape/thpano/thpano.do<br/>/co_cnt/ja/cuspar/newspape/thpano/thpano.do</td>
         </tr>
@@ -3833,7 +3854,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CH_03_04</td>
+          <td>#CO_CH_03_04</td>
           <td>repres</td>
           <td>/co_cnt/ko/cuspar/newspape/repres/repres.do<br/>/co_cnt/en/cuspar/newspape/repres/repres.do<br/>/co_cnt/ch/cuspar/newspape/repres/repres.do<br/>/co_cnt/ja/cuspar/newspape/repres/repres.do</td>
         </tr>
@@ -3905,7 +3926,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CH_06</td>
+          <td>#CO_CH_06</td>
           <td>abthom</td>
           <td>/co_cnt/ko/cuspar/newspape/abthom/abthom.do<br/>/co_cnt/en/cuspar/newspape/abthom/abthom.do<br/>/co_cnt/ch/cuspar/newspape/abthom/abthom.do<br/>/co_cnt/ja/cuspar/newspape/abthom/abthom.do</td>
         </tr>
@@ -3917,7 +3938,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CH_07</td>
+          <td>#CO_CH_07</td>
           <td>prosys</td>
           <td>/co_cnt/ko/cuspar/newspape/prosys/prosys.do<br/>/co_cnt/en/cuspar/newspape/prosys/prosys.do<br/>/co_cnt/ch/cuspar/newspape/prosys/prosys.do<br/>/co_cnt/ja/cuspar/newspape/prosys/prosys.do</td>
         </tr>
@@ -4037,7 +4058,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CI_01_01</td>
+          <td>#CO_CI_01_01</td>
           <td>infove</td>
           <td>/co_cnt/ko/cuspar/disclosu/infove/infove.do<br/>/co_cnt/en/cuspar/disclosu/infove/infove.do<br/>/co_cnt/ch/cuspar/disclosu/infove/infove.do<br/>/co_cnt/ja/cuspar/disclosu/infove/infove.do</td>
         </tr>
@@ -4049,7 +4070,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CI_01_02</td>
+          <td>#CO_CI_01_02</td>
           <td>produr</td>
           <td>/co_cnt/ko/cuspar/disclosu/produr/produr.do<br/>/co_cnt/en/cuspar/disclosu/produr/produr.do<br/>/co_cnt/ch/cuspar/disclosu/produr/produr.do<br/>/co_cnt/ja/cuspar/disclosu/produr/produr.do</td>
         </tr>
@@ -4061,7 +4082,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CI_01_03</td>
+          <td>#CO_CI_01_03</td>
           <td>inffee</td>
           <td>/co_cnt/ko/cuspar/disclosu/inffee/inffee.do<br/>/co_cnt/en/cuspar/disclosu/inffee/inffee.do<br/>/co_cnt/ch/cuspar/disclosu/inffee/inffee.do<br/>/co_cnt/ja/cuspar/disclosu/inffee/inffee.do</td>
         </tr>
@@ -4073,7 +4094,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CI_01_04</td>
+          <td>#CO_CI_01_04</td>
           <td>dispro</td>
           <td>/co_cnt/ko/cuspar/disclosu/dispro/dispro.do<br/>/co_cnt/en/cuspar/disclosu/dispro/dispro.do<br/>/co_cnt/ch/cuspar/disclosu/dispro/dispro.do<br/>/co_cnt/ja/cuspar/disclosu/dispro/dispro.do</td>
         </tr>
@@ -4229,7 +4250,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CI_05</td>
+          <td>#CO_CI_05</td>
           <td>indire</td>
           <td>/co_cnt/ko/cuspar/disclosu/indire/indire.do<br/>/co_cnt/en/cuspar/disclosu/indire/indire.do<br/>/co_cnt/ch/cuspar/disclosu/indire/indire.do<br/>/co_cnt/ja/cuspar/disclosu/indire/indire.do</td>
         </tr>
@@ -4253,7 +4274,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CI_06_01</td>
+          <td>#CO_CI_06_01</td>
           <td>pubove</td>
           <td>/co_cnt/ko/cuspar/disclosu/pubove/pubove.do<br/>/co_cnt/en/cuspar/disclosu/pubove/pubove.do<br/>/co_cnt/ch/cuspar/disclosu/pubove/pubove.do<br/>/co_cnt/ja/cuspar/disclosu/pubove/pubove.do</td>
         </tr>
@@ -4265,7 +4286,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CI_06_02</td>
+          <td>#CO_CI_06_02</td>
           <td>steope</td>
           <td>/co_cnt/ko/cuspar/disclosu/steope/steope.do<br/>/co_cnt/en/cuspar/disclosu/steope/steope.do<br/>/co_cnt/ch/cuspar/disclosu/steope/steope.do<br/>/co_cnt/ja/cuspar/disclosu/steope/steope.do</td>
         </tr>
@@ -4289,7 +4310,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_CI_07_01</td>
+          <td>#CO_CI_07_01</td>
           <td>buslst</td>
           <td>/co_cnt/ko/cuspar/disclosu/buslst/buslst.do<br/>/co_cnt/en/cuspar/disclosu/buslst/buslst.do<br/>/co_cnt/ch/cuspar/disclosu/buslst/buslst.do<br/>/co_cnt/ja/cuspar/disclosu/buslst/buslst.do</td>
         </tr>
@@ -5575,7 +5596,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_EE_01</td>
+          <td>#CO_EE_01</td>
           <td>onefam</td>
           <td>co_cnt/ko/bussup/faciliti/onefam/onefam.do<br/>co_cnt/en/bussup/faciliti/onefam/onefam.do<br/>co_cnt/ch/bussup/faciliti/onefam/onefam.do<br/>co_cnt/ja/bussup/faciliti/onefam/onefam.do</td>
         </tr>
@@ -5587,7 +5608,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_EE_02</td>
+          <td>#CO_EE_02</td>
           <td>inflib</td>
           <td>co_cnt/ko/bussup/faciliti/inflib/inflib.do<br/>co_cnt/en/bussup/faciliti/inflib/inflib.do<br/>co_cnt/ch/bussup/faciliti/inflib/inflib.do<br/>co_cnt/ja/bussup/faciliti/inflib/inflib.do</td>
         </tr>
@@ -5599,7 +5620,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_EE_03</td>
+          <td>#CO_EE_03</td>
           <td>avicen</td>
           <td>co_cnt/ko/bussup/faciliti/avicen/avicen.do<br/>co_cnt/en/bussup/faciliti/avicen/avicen.do<br/>co_cnt/ch/bussup/faciliti/avicen/avicen.do<br/>co_cnt/ja/bussup/faciliti/avicen/avicen.do</td>
         </tr>
@@ -5622,7 +5643,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_EF_01</td>
+          <td>#CO_EF_01</td>
           <td>respor</td>
           <td>co_cnt/ko/bussup/tenant/respor/respor.do<br/>co_cnt/en/bussup/tenant/respor/respor.do<br/>co_cnt/ch/bussup/tenant/respor/respor.do<br/>co_cnt/ja/bussup/tenant/respor/respor.do</td>
         </tr>
@@ -5646,7 +5667,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_EF_02_01</td>
+          <td>#CO_EF_02_01</td>
           <td>conpro</td>
           <td>co_cnt/ko/bussup/tenant/conpro/conpro.do<br/>co_cnt/en/bussup/tenant/conpro/conpro.do<br/>co_cnt/ch/bussup/tenant/conpro/conpro.do<br/>co_cnt/ja/bussup/tenant/conpro/conpro.do</td>
         </tr>
@@ -5739,7 +5760,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_EF_03_01</td>
+          <td>#CO_EF_03_01</td>
           <td>eleele</td>
           <td>co_cnt/ko/bussup/tenant/eleele/eleele.do<br/>co_cnt/en/bussup/tenant/eleele/eleele.do<br/>co_cnt/ch/bussup/tenant/eleele/eleele.do<br/>co_cnt/ja/bussup/tenant/eleele/eleele.do</td>
         </tr>
@@ -5751,7 +5772,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_EF_03_02</td>
+          <td>#CO_EF_03_02</td>
           <td>elecom</td>
           <td>co_cnt/ko/bussup/tenant/elecom/elecom.do<br/>co_cnt/en/bussup/tenant/elecom/elecom.do<br/>co_cnt/ch/bussup/tenant/elecom/elecom.do<br/>co_cnt/ja/bussup/tenant/elecom/elecom.do</td>
         </tr>
@@ -5763,7 +5784,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_EF_03_03</td>
+          <td>#CO_EF_03_03</td>
           <td>capita</td>
           <td>co_cnt/ko/bussup/tenant/capita/capita.do<br/>co_cnt/en/bussup/tenant/capita/capita.do<br/>co_cnt/ch/bussup/tenant/capita/capita.do<br/>co_cnt/ja/bussup/tenant/capita/capita.do</td>
         </tr>
@@ -5775,7 +5796,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_EF_03_04</td>
+          <td>#CO_EF_03_04</td>
           <td>sewage</td>
           <td>co_cnt/ko/bussup/tenant/sewage/sewage.do<br/>co_cnt/en/bussup/tenant/sewage/sewage.do<br/>co_cnt/ch/bussup/tenant/sewage/sewage.do<br/>co_cnt/ja/bussup/tenant/sewage/sewage.do</td>
         </tr>
@@ -5823,7 +5844,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_EF_05</td>
+          <td>#CO_EF_05</td>
           <td>respar</td>
           <td>co_cnt/ko/bussup/tenant/respar/respar.do<br/>co_cnt/en/bussup/tenant/respar/respar.do<br/>co_cnt/ch/bussup/tenant/respar/respar.do<br/>co_cnt/ja/bussup/tenant/respar/respar.do</td>
         </tr>
@@ -5965,7 +5986,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_EG_03_01</td>
+          <td>#CO_EG_03_01</td>
           <td>autsys</td>
           <td>co_cnt/ko/bussup/safety/autsys/autsys.do<br/>co_cnt/en/bussup/safety/autsys/autsys.do<br/>co_cnt/ch/bussup/safety/autsys/autsys.do<br/>co_cnt/ja/bussup/safety/autsys/autsys.do</td>
         </tr>
@@ -6015,7 +6036,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_FA</td>
+          <td>#CO_FA</td>
           <td>career</td>
           <td>co_cnt/ko/career/career/career.do<br/>co_cnt/en/career/career/career.do<br/>co_cnt/ch/career/career/career.do<br/>co_cnt/ja/career/career/career.do</td>
         </tr>
@@ -6027,7 +6048,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_FB</td>
+          <td>#CO_FB</td>
           <td>talent</td>
           <td>co_cnt/ko/career/talent/talent.do<br/>co_cnt/en/career/talent/talent.do<br/>co_cnt/ch/career/talent/talent.do<br/>co_cnt/ch/career/talent/talent.do</td>
         </tr>
@@ -6051,7 +6072,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_FC_01</td>
+          <td>#CO_FC_01</td>
           <td>affair</td>
           <td>co_cnt/ko/career/job/affair/affair.do<br/>co_cnt/en/career/job/affair/affair.do<br/>co_cnt/ch/career/job/affair/affair.do<br/>co_cnt/ja/career/job/affair/affair.do</td>
         </tr>
@@ -6063,7 +6084,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_FC_02</td>
+          <td>#CO_FC_02</td>
           <td>civeng</td>
           <td>co_cnt/ko/career/job/civeng/civeng.do<br/>co_cnt/en/career/job/civeng/civeng.do<br/>co_cnt/ch/career/job/civeng/civeng.do<br/>co_cnt/ja/career/job/civeng/civeng.do</td>
         </tr>
@@ -6075,7 +6096,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_FC_03</td>
+          <td>#CO_FC_03</td>
           <td>constr</td>
           <td>co_cnt/ko/career/job/constr/constr.do<br/>co_cnt/en/career/job/constr/constr.do<br/>co_cnt/ch/career/job/constr/constr.do<br/>co_cnt/ja/career/job/constr/constr.do</td>
         </tr>
@@ -6087,7 +6108,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_FC_04</td>
+          <td>#CO_FC_04</td>
           <td>machin</td>
           <td>co_cnt/ko/career/job/machin/machin.do<br/>co_cnt/en/career/job/machin/machin.do<br/>co_cnt/ch/career/job/machin/machin.do<br/>co_cnt/ja/career/job/machin/machin.do</td>
         </tr>
@@ -6099,7 +6120,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_FC_05</td>
+          <td>#CO_FC_05</td>
           <td>electr</td>
           <td>co_cnt/ko/career/job/electr/electr.do<br/>co_cnt/en/career/job/electr/electr.do<br/>co_cnt/ch/career/job/electr/electr.do<br/>co_cnt/ja/career/job/electr/electr.do</td>
         </tr>
@@ -6111,7 +6132,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_FC_06</td>
+          <td>#CO_FC_06</td>
           <td>comele</td>
           <td>co_cnt/ko/career/job/comele/comele.do<br/>co_cnt/en/career/job/comele/comele.do<br/>co_cnt/ch/career/job/comele/comele.do<br/>co_cnt/ja/career/job/comele/comele.do</td>
         </tr>
@@ -6123,7 +6144,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_FC_07</td>
+          <td>#CO_FC_07</td>
           <td>comput</td>
           <td>co_cnt/ko/career/job/comput/comput.do<br/>co_cnt/en/career/job/comput/comput.do<br/>co_cnt/ch/career/job/comput/comput.do<br/>co_cnt/ja/career/job/comput/comput.do</td>
         </tr>
@@ -6135,7 +6156,7 @@
           <td></td>
           <td></td>
           <td>Html</td>
-          <td>CO_FC_08</td>
+          <td>#CO_FC_08</td>
           <td>safsec</td>
           <td>co_cnt/ko/career/job/safsec/safsec.do<br/>co_cnt/en/career/job/safsec/safsec.do<br/>co_cnt/ch/career/job/safsec/safsec.do<br/>co_cnt/ja/career/job/safsec/safsec.do</td>
         </tr>

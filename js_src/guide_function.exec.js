@@ -40,7 +40,6 @@ $(function(){
   var fileData = [];
 
   var $record = $('.file-list tbody tr');
-  var $urlRecord = $('.url-list tbody tr');
 
   var count = {
 
@@ -54,17 +53,21 @@ $(function(){
     allLink : 0,
     allExtra : 0,
     allIframe : 0,
+    allForeign : 0,
+    allLayer : 0,
 
     doneWork : 0,
     doneHtml : 0,
     doneDev : 0,
     doneBoard : 0,
-    doneIframe : 0
+    doneIframe : 0,
+    doneForeign : 0,
+
+    exceptForeign : 0
 
   };
 
   var pageCount = 1;
-  var urlCount = 1;
 
   // each data split filename and ext
   function splitData(data){
@@ -105,6 +108,12 @@ $(function(){
 
       }
 
+      if($children.eq(7).text().indexOf('#') >= 0){
+
+        childrenText += ' except-foreign';
+
+      }
+
       $record.addClass(childrenText);
 
     }
@@ -120,7 +129,7 @@ $(function(){
 
         for(var j=0; j<item.length; j++){
 
-          if( $record.children('td:nth-child(8)').text() == item[j] ) {
+          if( $record.children('td:nth-child(8)').text().replace('#', '') == item[j] ) {
 
             $record.prepend('<td>'+ pageCount +'</td>');
             $record.addClass('done').append('<td class="center"><a href="' + pathName + '/' + category + '/html/' + item[j] + '.html" class="list-link" target="_blank"> Link </a></td>');
@@ -171,6 +180,7 @@ $(function(){
     $record.each(function () {
 
       var className = $(this).attr('class');
+      var cmsURL = $(this).children('td:nth-child(11)').text();
 
       if (className == 'primary-category') {
 
@@ -248,9 +258,36 @@ $(function(){
         }
       }
 
+      if( className.toLowerCase().indexOf('except-foreign') >= 0 ){
+
+        count.exceptForeign++;
+
+        $(this).children('td:nth-child(11)').text('');
+
+      } else {
+
+        if( cmsURL.indexOf('/en/') >= 0 ){
+          count.doneForeign++;
+        }
+
+        if( cmsURL.indexOf('/ja/') >= 0 ){
+          count.doneForeign++;
+        }
+
+        if( cmsURL.indexOf('/ch/') >= 0 ){
+          count.doneForeign++;
+        }
+
+      }
+
+      if( cmsURL.indexOf('Layer Popup') >= 0 ){
+        count.allLayer++;
+      }
+
     });
 
     count.allWork = count.allWork - count.allLink - count.allExtra;
+    count.allForeign = ( count.allHtml - count.exceptForeign ) * 3;
 
   }
 
@@ -275,6 +312,9 @@ $(function(){
     $('.all-work-develop').text(count.allDev + 'p');
     $('.done-work-develop .progress-bar').css({width: Math.floor( count.doneDev / count.allDev * 100) + '%'}).html('<div class="progress-percent">' + count.doneDev + 'p</div>');
 
+    $('.all-work-foreign').text(count.allForeign + 'p');
+    $('.done-work-foreign .progress-bar').css({width: Math.floor( count.doneForeign / count.allForeign * 100) + '%'}).html('<div class="progress-percent">' + count.doneForeign + 'p</div>');
+
     $('.all-work-iframe').text(count.allIframe + 'p');
     $('.done-work-iframe .progress-bar').css({width: Math.floor( count.doneIframe / count.allIframe * 100) + '%'}).html('<div class="progress-percent">' + count.doneIframe + 'p</div>');
 
@@ -289,9 +329,13 @@ $(function(){
 
       if( $record.attr('class').indexOf('page') >= 0 ){
 
-        console.log($record.children('td:nth-child(11)').text());
+        if( $record.children('td:nth-child(11)').text() == 'Layer Popup' ){
 
-        if( $record.children('td:nth-child(11)').text() != '' ){
+          $record
+              .addClass('done')
+              .append('<td class="center bg-gray">Layer Popup</td>');
+
+        } else if( $record.children('td:nth-child(11)').text() != '' ){
 
           var urlFile = $record.children('td:nth-child(11)').html().split('<br>');
 
