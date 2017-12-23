@@ -62,7 +62,9 @@ $(function(){
     doneDev : 0,
     doneBoard : 0,
     doneIframe : 0,
-    doneForeign : 0
+    doneForeign : 0,
+
+    exceptForeign : 0
 
   };
 
@@ -108,6 +110,12 @@ $(function(){
 
       }
 
+      if($children.eq(7).text().indexOf('#') >= 0){
+
+        childrenText += ' except-foreign';
+
+      }
+
       $record.addClass(childrenText);
 
     }
@@ -123,7 +131,9 @@ $(function(){
 
         for(var j=0; j<item.length; j++){
 
-          if( $record.children('td:nth-child(8)').text() == item[j] ) {
+
+
+          if( $record.children('td:nth-child(8)').text().replace('#', '') == item[j] ) {
 
             $record.prepend('<td>'+ pageCount +'</td>');
             $record.addClass('done').append('<td class="center"><a href="' + pathName + '/' + category + '/html/' + item[j] + '.html" class="list-link" target="_blank"> Link </a></td>');
@@ -225,10 +235,6 @@ $(function(){
 
       }
 
-      if( cmsURL.indexOf('Layer Popup') >= 0 ){
-        count.allLayer++;
-      }
-
       if (className.toLowerCase().indexOf('done') >= 0) {
         // number of done page
         count.doneWork++;
@@ -256,6 +262,16 @@ $(function(){
         }
       }
 
+      if( className.toLowerCase().indexOf('except-foreign') >= 0 ){
+
+        count.exceptForeign++;
+
+      }
+
+      if( cmsURL.indexOf('Layer Popup') >= 0 ){
+        count.allLayer++;
+      }
+
       if( cmsURL.indexOf('/en/') >= 0 ){
         count.doneForeign++;
       }
@@ -268,13 +284,10 @@ $(function(){
         count.doneForeign++;
       }
 
-
     });
 
-
-
     count.allWork = count.allWork - count.allLink - count.allExtra;
-    count.allForeign = ( count.allHtml - count.allLayer ) * 3;
+    count.allForeign = ( count.allHtml - count.allLayer + count.exceptForeign ) * 3;
 
   }
 
