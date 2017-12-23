@@ -123,7 +123,7 @@ $(function(){
           if( $record.children('td:nth-child(8)').text() == item[j] ) {
 
             $record.prepend('<td>'+ pageCount +'</td>');
-            $record.addClass('done').append('<td class="center"><a href="' + pathName + '/' + category + '/html/' + item[j] + '.html" class="list-link" target="blank"> Link </a></td>');
+            $record.addClass('done').append('<td class="center"><a href="' + pathName + '/' + category + '/html/' + item[j] + '.html" class="list-link" target="_blank"> Link </a></td>');
             itemFlag[j] = true;
             pageCount++;
             break;
