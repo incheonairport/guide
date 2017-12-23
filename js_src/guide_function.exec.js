@@ -40,7 +40,6 @@ $(function(){
   var fileData = [];
 
   var $record = $('.file-list tbody tr');
-  var $urlRecord = $('.url-list tbody tr');
 
   var count = {
 
@@ -69,7 +68,6 @@ $(function(){
   };
 
   var pageCount = 1;
-  var urlCount = 1;
 
   // each data split filename and ext
   function splitData(data){
@@ -130,8 +128,6 @@ $(function(){
       if( $record.attr('class').indexOf('page') >= 0 ){
 
         for(var j=0; j<item.length; j++){
-
-
 
           if( $record.children('td:nth-child(8)').text().replace('#', '') == item[j] ) {
 
@@ -266,28 +262,32 @@ $(function(){
 
         count.exceptForeign++;
 
+        $(this).children('td:nth-child(11)').text('');
+
+      } else {
+
+        if( cmsURL.indexOf('/en/') >= 0 ){
+          count.doneForeign++;
+        }
+
+        if( cmsURL.indexOf('/ja/') >= 0 ){
+          count.doneForeign++;
+        }
+
+        if( cmsURL.indexOf('/ch/') >= 0 ){
+          count.doneForeign++;
+        }
+
       }
 
       if( cmsURL.indexOf('Layer Popup') >= 0 ){
         count.allLayer++;
       }
 
-      if( cmsURL.indexOf('/en/') >= 0 ){
-        count.doneForeign++;
-      }
-
-      if( cmsURL.indexOf('/ja/') >= 0 ){
-        count.doneForeign++;
-      }
-
-      if( cmsURL.indexOf('/ch/') >= 0 ){
-        count.doneForeign++;
-      }
-
     });
 
     count.allWork = count.allWork - count.allLink - count.allExtra;
-    count.allForeign = ( count.allHtml - count.allLayer + count.exceptForeign ) * 3;
+    count.allForeign = ( count.allHtml - count.exceptForeign ) * 3;
 
   }
 
