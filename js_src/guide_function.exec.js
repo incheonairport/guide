@@ -54,12 +54,15 @@ $(function(){
     allLink : 0,
     allExtra : 0,
     allIframe : 0,
+    allForeign : 0,
+    allLayer : 0,
 
     doneWork : 0,
     doneHtml : 0,
     doneDev : 0,
     doneBoard : 0,
-    doneIframe : 0
+    doneIframe : 0,
+    doneForeign : 0
 
   };
 
@@ -171,6 +174,7 @@ $(function(){
     $record.each(function () {
 
       var className = $(this).attr('class');
+      var cmsURL = $(this).children('td:nth-child(11)').text();
 
       if (className == 'primary-category') {
 
@@ -221,6 +225,10 @@ $(function(){
 
       }
 
+      if( cmsURL.indexOf('Layer Popup') >= 0 ){
+        count.allLayer++;
+      }
+
       if (className.toLowerCase().indexOf('done') >= 0) {
         // number of done page
         count.doneWork++;
@@ -248,9 +256,25 @@ $(function(){
         }
       }
 
+      if( cmsURL.indexOf('/en/') >= 0 ){
+        count.doneForeign++;
+      }
+
+      if( cmsURL.indexOf('/ja/') >= 0 ){
+        count.doneForeign++;
+      }
+
+      if( cmsURL.indexOf('/ch/') >= 0 ){
+        count.doneForeign++;
+      }
+
+
     });
 
+
+
     count.allWork = count.allWork - count.allLink - count.allExtra;
+    count.allForeign = ( count.allHtml - count.allLayer ) * 3;
 
   }
 
@@ -275,6 +299,9 @@ $(function(){
     $('.all-work-develop').text(count.allDev + 'p');
     $('.done-work-develop .progress-bar').css({width: Math.floor( count.doneDev / count.allDev * 100) + '%'}).html('<div class="progress-percent">' + count.doneDev + 'p</div>');
 
+    $('.all-work-foreign').text(count.allForeign + 'p');
+    $('.done-work-foreign .progress-bar').css({width: Math.floor( count.doneForeign / count.allForeign * 100) + '%'}).html('<div class="progress-percent">' + count.doneForeign + 'p</div>');
+
     $('.all-work-iframe').text(count.allIframe + 'p');
     $('.done-work-iframe .progress-bar').css({width: Math.floor( count.doneIframe / count.allIframe * 100) + '%'}).html('<div class="progress-percent">' + count.doneIframe + 'p</div>');
 
@@ -289,9 +316,13 @@ $(function(){
 
       if( $record.attr('class').indexOf('page') >= 0 ){
 
-        console.log($record.children('td:nth-child(11)').text());
+        if( $record.children('td:nth-child(11)').text() == 'Layer Popup' ){
 
-        if( $record.children('td:nth-child(11)').text() != '' ){
+          $record
+              .addClass('done')
+              .append('<td class="center bg-gray">Layer Popup</td>');
+
+        } else if( $record.children('td:nth-child(11)').text() != '' ){
 
           var urlFile = $record.children('td:nth-child(11)').html().split('<br>');
 
