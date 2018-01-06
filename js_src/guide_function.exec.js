@@ -177,7 +177,7 @@ $(function(){
 
   function countProgress(){
 
-    $record.each(function () {
+    $record.each(function() {
 
       var className = $(this).attr('class');
       var cmsURL = $(this).children('td:nth-child(11)').text();
@@ -261,8 +261,6 @@ $(function(){
       if( className.toLowerCase().indexOf('except-foreign') >= 0 ){
 
         count.exceptForeign++;
-
-        $(this).children('td:nth-child(11)').text('');
 
       } else {
 
@@ -362,6 +360,17 @@ $(function(){
       $record.append('<td></td>');
 
     }
+
+  }
+
+  // remove URL
+  function removeURL($record){
+
+    $record.each(function(){
+
+
+
+    });
 
   }
 
